@@ -51,7 +51,9 @@ public class PlayerController : MonoBehaviour {
 		rb.velocity = new Vector3 (x * speed * Time.deltaTime, rb.velocity.y);
 
 		if (Input.GetKeyDown (KeyCode.Space) && grounded) {
-			rb.AddForce (new Vector3 (0, jumpForce, 0), ForceMode.Impulse);		
+			rb.AddForce (new Vector3 (0, jumpForce, 0), ForceMode.Impulse);	
+			//SoundManager.instance.PlaySingle (jump);
+
 		}
 					
 
