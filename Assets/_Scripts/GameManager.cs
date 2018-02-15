@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour {
 
 
 	void Start () {
-		state = GameState.menu;
+		state = GameState.playing;
 		player = GameObject.FindGameObjectWithTag ("Player");
 		
 	}
