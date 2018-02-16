@@ -7,8 +7,8 @@ public class Collect : MonoBehaviour {
 	public int points;
 //	public AudioClip collect;
 
-	void OnCollisionEnter(Collision other) {
-		if (other.collider.tag == "Player") {
+	void OnTriggerEnter(Collider other) {
+		if (other.tag == "Player") {
 //			SoundManager.instance.PlaySingle (collect);
 			GameManager.AddScore (points);
 			Destroy (this.gameObject);

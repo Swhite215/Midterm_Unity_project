@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour {
 		Debug.Log (GameManager.state);
 
 		if (GameManager.state == GameManager.GameState.gameover) {
-			anim.SetTrigger ("Dead");
+			anim.SetTrigger ("Cry");
 		} else if (GameManager.state == GameManager.GameState.playing) {
 			anim.SetTrigger ("Moving");
 		}
@@ -81,6 +81,13 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
+	public void jumpPowerUp() {
+		jumpForce += 10f;
+	}
+
+	public void speedPowerUp() {
+		speed += 10f;
+	}
 
 
 //	public void Respawn () {
