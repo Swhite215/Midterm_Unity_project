@@ -11,10 +11,11 @@ public class GameManager : MonoBehaviour {
 	public static int score = 0;
 	public static GameState state;
 	public static GameObject player;
+	public static bool pausedGame;
 
 	// UI Elements
-	//score text 
-	//level/progression text
+	public Text scoreText;
+	public GameObject nextLevelTextObject;
 	//pausedTextObject
 	//gameOverTextObject or wonTextObject
 	//play textObject probobaly a menu 
@@ -24,24 +25,29 @@ public class GameManager : MonoBehaviour {
 	void Start () {
 		state = GameState.playing;
 		player = GameObject.FindGameObjectWithTag ("Player");
+		//for right now until we figure out flow 
+		nextLevelTextObject.SetActive (false);
+		pausedGame = false;
+
 		
 	}
 	
 	void Update () {
-//		scoreText.text = "" + score;
+		scoreText.text = "" + score;
 
-		// Pause Game
-//		if (Input.GetKeyDown ( (KeyCode.Escape))) { // Find mobile equivalent
-//			if(state == GameState.playing) {
-//				// Time.timeScale stops everything
-//				Time.timeScale = 0;
-//				state = GameState.paused;
-//			}
+		 //Pause Game
+		if (pausedGame) { // Find mobile equivalent
+			if(state == GameState.playing) {
+				// Time.timeScale stops everything
+				Time.timeScale = 0;
+				state = GameState.paused;
+			}
+			// Use this code in menu to unpause game 
 //			else if (state == GameState.paused) {
 //				Time.timeScale = 1;
 //				state = GameState.playing;
 //			}
-//		}
+		}
 
 //		if (state == GameState.playing) {
 //			// Set text objects .SetActive to false
@@ -76,10 +82,16 @@ public class GameManager : MonoBehaviour {
 	}
 
 //	public static void NextLevel () {
+		
 //		level++;
 //		// When to do this?
+//		nextLevelTextObject.SetActive (true);
 //		SceneManager.LoadScene ("Level" + level);
 //	}
+
+	public static void PauseGame() {
+		pausedGame = true;
+	}
 
 //	private void Restart() {
 //		// should we ever?
