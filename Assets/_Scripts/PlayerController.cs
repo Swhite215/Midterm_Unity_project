@@ -29,6 +29,8 @@ public class PlayerController : MonoBehaviour {
 
 		if (GameManager.state == GameManager.GameState.gameover) {
 			anim.SetTrigger ("Cry");
+
+
 		} else if (GameManager.state == GameManager.GameState.playing) {
 			anim.SetTrigger ("Moving");
 		}
