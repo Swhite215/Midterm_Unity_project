@@ -107,11 +107,13 @@ public class PlayerController : MonoBehaviour {
 		}
 		if (Input.GetKeyDown ("a") && canTurn) { 
 			transform.Rotate (0, -90, 0);
+			moveDirection = transform.forward;
 			canTurn = false;
 			}
 
-		if (Input.GetKeyDown ("d") && canTurn) { 
+		if (Input.GetKeyDown ("d") && canTurn) {
 			transform.Rotate (0, 90, 0);
+			moveDirection = transform.forward;
 			canTurn = false;
 			}
 		
