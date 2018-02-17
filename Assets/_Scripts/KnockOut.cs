@@ -9,7 +9,7 @@ public class KnockOut : MonoBehaviour {
 	void OnCollisionEnter(Collision other) {
 		if (other.collider.tag == "Player") {
 //			SoundManager.instance.PlaySingle (knockOut);
-			GameManager.KnockOut ();
+			GameManager.state = GameManager.GameState.gameover;
 		}
 	}
 }

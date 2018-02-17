@@ -60,6 +60,7 @@ public class GameManager : MonoBehaviour {
 
 	public static void AddScore(int points) {
 		score += points;
+		Debug.Log (score);
 	}
 
 	public static void KnockOut () {
