@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
 //		spawnPoint = transform.position;
 		moveDirection = transform.forward;
+		Debug.Log (moveDirection);
 		canTurn = false;
 
 		rb = GetComponent<Rigidbody> ();
@@ -54,13 +55,12 @@ public class PlayerController : MonoBehaviour {
 	}
 	// change powerups to enum and switch statements 
 	public void JumpPowerUp() {
-		jumpForce += 10f;
+		jumpForce += 1f;
 	}
 
 	public void SpeedPowerUp() {
-		speed += 10f;
+		speed += 20f;
 	}
-
 
 
 	//	public void Respawn () {
@@ -79,18 +79,6 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
-<<<<<<< HEAD
-	public void jumpPowerUp() {
-		jumpForce += 1f;
-	}
-
-	public void speedPowerUp() {
-		speed += 20f;
-=======
-
-
-
-
 
 	void PlayerMovement() {
 		//MOBILE
@@ -104,10 +92,11 @@ public class PlayerController : MonoBehaviour {
 		//		}
 
 		float x = Input.GetAxis ("Horizontal");
-		rb.AddForce(moveDirection * speed);
+		rb.AddForce(moveDirection * speed * Time.deltaTime);
 
+		transform.Translate (new Vector3 (x * 5 * Time.deltaTime, 0, 0));
 
-		rb.velocity = new Vector3 (x * speed * Time.deltaTime, rb.velocity.y);
+		//rb.velocity = new Vector3 (x * speed * Time.deltaTime, rb.velocity.y, 0);
 		// to get him to hop in circle s
 		//		rb.velocity = new Vector3 (xVel, yVel, zVel);
 
@@ -118,13 +107,11 @@ public class PlayerController : MonoBehaviour {
 		}
 		if (Input.GetKeyDown ("a") && canTurn) { 
 			transform.Rotate (0, -90, 0);
-			moveDirection = Quaternion.AngleAxis (-90, Vector3.up) * moveDirection;
 			canTurn = false;
 			}
 
 		if (Input.GetKeyDown ("d") && canTurn) { 
 			transform.Rotate (0, 90, 0);
-			moveDirection = Quaternion.AngleAxis (90, Vector3.up) * moveDirection;
 			canTurn = false;
 			}
 		
@@ -140,7 +127,6 @@ public class PlayerController : MonoBehaviour {
 		////			Input.GetTouch (0);
 		//			SoundManage.instance.PlaySingle (jump);
 		//			rb.AddForce (new Vector3 (0, jumpForce));
->>>>>>> 4e1733d7e3d182cf1b82ccd3f75c09afb03be34d
 	}
 
 

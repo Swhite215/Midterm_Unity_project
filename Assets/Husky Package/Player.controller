@@ -13,28 +13,19 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Jump
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Cry
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
-<<<<<<< HEAD
-    m_DefaultBool: 1
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 58474126037329691987a0021746541d2d9043ae
-=======
     m_DefaultBool: 0
->>>>>>> 7bb198d91cf61bbea4c9d9dc56275a20057278f4
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -226,7 +217,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Husky_Jump_Up
-  m_Speed: 1
+  m_Speed: 1.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101435478064453576}
@@ -255,16 +246,16 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102528605866647978}
-    m_Position: {x: 276, y: 120, z: 0}
+    m_Position: {x: 276, y: 204, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102446451857598478}
-    m_Position: {x: 276, y: 12, z: 0}
+    m_Position: {x: 264, y: 108, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102672075876514012}
-    m_Position: {x: 552, y: 60, z: 0}
+    m_Position: {x: 504, y: 168, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102373134832193004}
-       m_Position: {x: 516, y: 180, z: 0}
+    m_Position: {x: 504, y: 276, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
