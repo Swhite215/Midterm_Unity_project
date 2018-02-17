@@ -82,11 +82,11 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	public void jumpPowerUp() {
-		jumpForce += 10f;
+		jumpForce += 1f;
 	}
 
 	public void speedPowerUp() {
-		speed += 10f;
+		speed += 20f;
 	}
 
 
