@@ -18,7 +18,7 @@ public class BowlPowerUp : MonoBehaviour {
 
 	void OnTriggerEnter (Collider other) {
 		if (other.tag == "Player") {
-			playerController.speedPowerUp ();
+			playerController.SpeedPowerUp ();
 			Destroy (gameObject);
 		}
 	}

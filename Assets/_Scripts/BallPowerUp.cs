@@ -18,7 +18,7 @@ public class BallPowerUp : MonoBehaviour {
 
 	void OnTriggerEnter (Collider other) {
 		if (other.tag == "Player") {
-			playerController.jumpPowerUp ();
+			playerController.JumpPowerUp ();
 			Destroy (this.gameObject);
 		}
 	}

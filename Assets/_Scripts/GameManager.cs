@@ -49,19 +49,19 @@ public class GameManager : MonoBehaviour {
 //			}
 		}
 
-//		if (state == GameState.playing) {
-//			// Set text objects .SetActive to false
-//		}
-//		else if (state == GameState.paused) {
-//			// set pausedTextObject.SetActive(true);
-//		}
-//		else if (state == GameState.gameover) {
-			// game or won TextObject SetActive to true
+		if (state == GameState.playing) {
+			// Set text objects .SetActive to false
+		}
+		else if (state == GameState.paused) {
+			// set pausedTextObject.SetActive(true);
+		}
+		else if (state == GameState.gameover) {
+			 //game or won TextObject SetActive to true
 			//restartText Set Active to true
-//			if (Input.GetKeyDown(KeyCode.R)) { // find mobile equivalent/or just show button on menu
+			if (Input.GetKeyDown(KeyCode.R)) { // find mobile equivalent/or just show button on menu
 //				Restart ();
-//			}
-//		}
+			}
+		}
 	}
 
 	public static void AddScore(int points) {

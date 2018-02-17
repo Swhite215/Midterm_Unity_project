@@ -3,19 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FollowCam : MonoBehaviour {
-	private Vector3 offset;
-	private GameObject player;
+	public Transform target;
 
-	// Use this for initialization
-	void Start () {
-		player = GameObject.FindWithTag ("Player");
-		offset = transform.position - player.transform.position;
+	public Vector3 offsetPosition;
+
+	private Space offsetPositionSpace = Space.Self;
+	private bool lookAt = true;
+
+	void LateUpdate () {
+		Refresh ();
 	}
 
-	// Update is called once per frame
-	void Update () {
-		if (player != null) {
-			transform.position = player.transform.position + offset;
+	public void Refresh() {
+		if (target == null) {
+			Debug.Log ("Missing Player Transform");
+			return;
+		}
+		// POSITION
+		if(offsetPositionSpace == Space.Self) {
+			transform.position = target.TransformPoint (offsetPosition);
+		}
+		else {
+			transform.position = target.position + offsetPosition;
+		}
+		 //ROTATION
+		if(lookAt) {
+			transform.LookAt (target);
+		}
+		else {
+			transform.rotation = target.rotation;
 		}
 	}
+
+
 }
