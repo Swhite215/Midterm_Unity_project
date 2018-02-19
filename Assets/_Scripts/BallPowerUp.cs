@@ -5,6 +5,7 @@ using UnityEngine;
 public class BallPowerUp : MonoBehaviour {
 
 	private PlayerController playerController;
+	public AudioClip collectBall;
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +19,7 @@ public class BallPowerUp : MonoBehaviour {
 
 	void OnTriggerEnter (Collider other) {
 		if (other.tag == "Player") {
+			SoundManager.instance.PlaySingle (collectBall);
 			playerController.JumpPowerUp ();
 			Destroy (this.gameObject);
 		}

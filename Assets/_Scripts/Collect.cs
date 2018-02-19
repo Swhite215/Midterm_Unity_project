@@ -5,11 +5,11 @@ using UnityEngine;
 public class Collect : MonoBehaviour {
 
 	public int points;
-//	public AudioClip collect;
+	public AudioClip collect;
 
 	void OnTriggerEnter(Collider other) {
 		if (other.tag == "Player") {
-//			SoundManager.instance.PlaySingle (collect);
+			SoundManager.instance.PlaySingle (collect);
 			GameManager.AddScore (points);
 			Destroy (this.gameObject);
 		}

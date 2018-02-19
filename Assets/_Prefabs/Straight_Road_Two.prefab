@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4523881236003050}
   - component: {fileID: 95943923580190692}
   - component: {fileID: 65105096434970956}
-  - component: {fileID: 114105617464191248}
+  - component: {fileID: 114199695726294950}
   m_Layer: 0
   m_Name: Car_3_Bumper
   m_TagString: Untagged
@@ -1465,7 +1465,7 @@ GameObject:
   - component: {fileID: 4850091804878992}
   - component: {fileID: 95263853947012308}
   - component: {fileID: 65801728771975384}
-  - component: {fileID: 114991263713655602}
+  - component: {fileID: 114580528052639822}
   m_Layer: 0
   m_Name: Car_2_Bumper
   m_TagString: Untagged
@@ -5543,7 +5543,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114105617464191248
+--- !u!114 &114199695726294950
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -5551,9 +5551,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1019596902495448}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fed69d7e3c6a4b868d10088ffd6b18d, type: 3}
+  m_Script: {fileID: 11500000, guid: 187660bae13cb4e8599a2e76a635f224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carHorn: {fileID: 8300000, guid: 42a7d9cac25d26241b242491c117b8cf, type: 3}
 --- !u!114 &114264470815651592
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5566,6 +5567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 5
+  collect: {fileID: 8300000, guid: d09e88c7366d3384cb38c7295578f510, type: 3}
 --- !u!114 &114549426470520596
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5577,7 +5579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef68b2a028e5c5649a34ad4d8d842973, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 20
+  lifeTime: 35
 --- !u!114 &114567321461253306
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5590,6 +5592,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 5
+  collect: {fileID: 8300000, guid: d09e88c7366d3384cb38c7295578f510, type: 3}
+--- !u!114 &114580528052639822
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1996313175518864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 187660bae13cb4e8599a2e76a635f224, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carHorn: {fileID: 8300000, guid: 42a7d9cac25d26241b242491c117b8cf, type: 3}
 --- !u!114 &114640815320079816
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5602,6 +5617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 5
+  collect: {fileID: 8300000, guid: d09e88c7366d3384cb38c7295578f510, type: 3}
 --- !u!114 &114715180419712906
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5635,6 +5651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c57bb3cf5cd6ab4b8533a18b01f722b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectWater: {fileID: 8300000, guid: ec28adccbeb07474fac8504a17c3e8d5, type: 3}
 --- !u!114 &114825468942915386
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5647,6 +5664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 5
+  collect: {fileID: 8300000, guid: d09e88c7366d3384cb38c7295578f510, type: 3}
 --- !u!114 &114864143042938870
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5659,6 +5677,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 5
+  collect: {fileID: 8300000, guid: d09e88c7366d3384cb38c7295578f510, type: 3}
 --- !u!114 &114889487318838708
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5671,17 +5690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 5
---- !u!114 &114991263713655602
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1996313175518864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fed69d7e3c6a4b868d10088ffd6b18d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  collect: {fileID: 8300000, guid: d09e88c7366d3384cb38c7295578f510, type: 3}
 --- !u!136 &136372860613379024
 CapsuleCollider:
   m_ObjectHideFlags: 1

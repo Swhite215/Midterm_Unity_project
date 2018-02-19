@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class CarHit : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+	public AudioClip carHorn;
+
+	void OnCollisionEnter(Collision other) {
+		if (other.collider.tag == "Player") {
+			SoundManager.instance.PlaySingle (carHorn);
+			GameManager.state = GameManager.GameState.gameover;
+		}
 	}
 }

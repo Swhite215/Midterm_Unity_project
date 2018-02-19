@@ -5,6 +5,7 @@ using UnityEngine;
 public class BowlPowerUp : MonoBehaviour {
 
 	private PlayerController playerController;
+	public AudioClip collectWater;
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +19,7 @@ public class BowlPowerUp : MonoBehaviour {
 
 	void OnTriggerEnter (Collider other) {
 		if (other.tag == "Player") {
+			SoundManager.instance.PlaySingle (collectWater);
 			playerController.SpeedPowerUp ();
 			Destroy (gameObject);
 		}

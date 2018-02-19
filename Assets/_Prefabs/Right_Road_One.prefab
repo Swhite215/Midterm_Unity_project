@@ -592,7 +592,7 @@ GameObject:
   - component: {fileID: 4635033666300880}
   - component: {fileID: 95650705873863492}
   - component: {fileID: 65575395498201658}
-  - component: {fileID: 114687638082963688}
+  - component: {fileID: 114428954479440320}
   m_Layer: 0
   m_Name: Car_3_Bumper
   m_TagString: Untagged
@@ -795,7 +795,7 @@ GameObject:
   - component: {fileID: 4592335957810614}
   - component: {fileID: 95209314424357136}
   - component: {fileID: 65090359487894606}
-  - component: {fileID: 114491276922359986}
+  - component: {fileID: 114568764288496084}
   m_Layer: 0
   m_Name: Car_2_Bumper
   m_TagString: Untagged
@@ -4169,6 +4169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 5
+  collect: {fileID: 8300000, guid: d09e88c7366d3384cb38c7295578f510, type: 3}
 --- !u!114 &114227432883904850
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4181,6 +4182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 5
+  collect: {fileID: 8300000, guid: d09e88c7366d3384cb38c7295578f510, type: 3}
 --- !u!114 &114229436537302666
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4192,6 +4194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4a6b1104060aef4caa240fb69cd5c66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectBall: {fileID: 8300000, guid: 194dd727f641abc43b23a6f5679eb057, type: 3}
 --- !u!114 &114238368337957880
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4204,6 +4207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 5
+  collect: {fileID: 8300000, guid: d09e88c7366d3384cb38c7295578f510, type: 3}
 --- !u!114 &114277224767245246
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4215,6 +4219,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fed69d7e3c6a4b868d10088ffd6b18d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  knockOut: {fileID: 8300000, guid: 2e255c6c2f5ccd84fbe86ca7d13e0f22, type: 3}
+--- !u!114 &114428954479440320
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1503335667150242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 187660bae13cb4e8599a2e76a635f224, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carHorn: {fileID: 8300000, guid: 42a7d9cac25d26241b242491c117b8cf, type: 3}
 --- !u!114 &114452204534980644
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4227,7 +4244,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 5
---- !u!114 &114491276922359986
+  collect: {fileID: 8300000, guid: d09e88c7366d3384cb38c7295578f510, type: 3}
+--- !u!114 &114568764288496084
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -4235,20 +4253,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1760649498367344}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fed69d7e3c6a4b868d10088ffd6b18d, type: 3}
+  m_Script: {fileID: 11500000, guid: 187660bae13cb4e8599a2e76a635f224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114687638082963688
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1503335667150242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fed69d7e3c6a4b868d10088ffd6b18d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  carHorn: {fileID: 8300000, guid: 42a7d9cac25d26241b242491c117b8cf, type: 3}
 --- !u!114 &114790586214924926
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4260,7 +4268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef68b2a028e5c5649a34ad4d8d842973, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 20
+  lifeTime: 35
 --- !u!114 &114814674891791086
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4272,6 +4280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4a6b1104060aef4caa240fb69cd5c66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectBall: {fileID: 8300000, guid: 194dd727f641abc43b23a6f5679eb057, type: 3}
 --- !u!114 &114861105526563842
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4305,6 +4314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fed69d7e3c6a4b868d10088ffd6b18d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  knockOut: {fileID: 8300000, guid: 2e255c6c2f5ccd84fbe86ca7d13e0f22, type: 3}
 --- !u!114 &114926953205903548
 MonoBehaviour:
   m_ObjectHideFlags: 1

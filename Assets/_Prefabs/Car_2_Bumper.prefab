@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 4356700232118264}
   - component: {fileID: 95113064850582822}
   - component: {fileID: 65740201591682446}
-  - component: {fileID: 114389007502420686}
+  - component: {fileID: 114559850081319186}
   m_Layer: 0
   m_Name: Car_2_Bumper
   m_TagString: Untagged
@@ -432,7 +432,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114389007502420686
+--- !u!114 &114559850081319186
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -440,6 +440,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1905921468536420}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fed69d7e3c6a4b868d10088ffd6b18d, type: 3}
+  m_Script: {fileID: 11500000, guid: 187660bae13cb4e8599a2e76a635f224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
