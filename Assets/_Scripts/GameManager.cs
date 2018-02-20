@@ -14,8 +14,8 @@ public class GameManager : MonoBehaviour {
 	public static bool pausedGame;
 
 	// UI Elements
-	public Text scoreText;
-	public GameObject nextLevelTextObject;
+	//public Text scoreText = null;
+	//public GameObject nextLevelTextObject = null;
 	//pausedTextObject
 	//gameOverTextObject or wonTextObject
 	//play textObject probobaly a menu 
@@ -26,14 +26,14 @@ public class GameManager : MonoBehaviour {
 		state = GameState.playing;
 		player = GameObject.FindGameObjectWithTag ("Player");
 		//for right now until we figure out flow 
-		nextLevelTextObject.SetActive (false);
+		//nextLevelTextObject.SetActive (false);
 		pausedGame = false;
 
 		
 	}
 	
 	void Update () {
-		scoreText.text = "" + score;
+		//scoreText.text = "" + score;
 
 		 //Pause Game
 		if (pausedGame) { // Find mobile equivalent
@@ -97,4 +97,9 @@ public class GameManager : MonoBehaviour {
 //	private void Restart() {
 //		// should we ever?
 //	}
+
+	public void LoadLevel(string sceneName) {
+		Debug.Log("Clicked!");
+		SceneManager.LoadScene (sceneName);
+	}
 }
